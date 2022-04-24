@@ -1,0 +1,137 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  max-height: 5rem;
+  background-color: #000;
+}
+nav img {
+  height: 60%;
+  margin-left: 1rem;
+  width: auto;
+}
+nav svg {
+  margin-right: 1rem;
+}
+nav ul {
+  display: none;
+  list-style: none;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+main {
+  border: 1px solid #000;
+  margin: 0 0.25rem 1rem;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main article {
+  border: 1px dotted rgba(80, 80, 80, 0.5);
+  padding: 0.5rem 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+main article > :nth-child(2) {
+  margin: 0.75rem 0 1rem;
+}
+main article > :nth-child(3) {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+main article > :nth-child(4) {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+aside {
+  border: 1px solid #000;
+  margin: 0 0.25rem 1rem;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+aside img {
+  width: 60%;
+  max-width: 375px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+aside > :nth-child(4) {
+  align-self: flex-start;
+  text-align: justify;
+}
+aside > :nth-child(5) {
+  width: 100%;
+  margin: 0.75rem 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #505050;
+}
+aside > :nth-child(6) {
+  align-self: flex-start;
+  margin-bottom: 2rem;
+  padding-left: 1.125rem;
+  list-style: circle;
+}
+aside a {
+  text-decoration: none;
+}
+
+aside > svg {
+  width: 70vw;
+  max-width: 375px;
+}
+
+.tag {
+  animation: moverTag 2s alternate linear infinite;
+}
+
+.rueda {
+  animation: girarRueda 2s linear infinite;
+  transform-origin: 79.07% 79.07%;
+}
+
+@keyframes girarRueda {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@keyframes moverTag {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(30%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

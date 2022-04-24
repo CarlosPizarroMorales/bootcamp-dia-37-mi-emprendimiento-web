@@ -1,0 +1,26 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  max-height: 5rem;
+  background-color: $black;
+  
+
+  img {
+    height: 60%;
+    margin-left: 1rem;
+    width: auto;
+  }
+
+  svg {
+    margin-right: 1rem;
+  }
+
+  ul {
+    display: none;
+    list-style: none;
+  }
+
+
+}

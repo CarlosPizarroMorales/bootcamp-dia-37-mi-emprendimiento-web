@@ -1,0 +1,22 @@
+aside > svg {
+    width: 70vw;
+    max-width: 375px;
+
+}
+
+.tag {
+  animation: moverTag 2s alternate linear infinite;
+}
+.rueda {
+  animation: girarRueda 2s linear infinite;
+  transform-origin: 79.07% 79.07%;
+}
+
+@keyframes girarRueda {
+  0% { transform: rotate(0deg)}
+  100% { transform: rotate(359deg)}
+}
+@keyframes moverTag {
+  from {transform: translateX(0%)}
+  to {transform: translateX(30%)}
+}
