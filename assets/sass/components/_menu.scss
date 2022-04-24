@@ -1,0 +1,39 @@
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+nav > ul {
+  display: none;  
+  list-style: none;
+  position: fixed;
+  top: 50vh;
+  left: 0;
+  transform: translateY(-50%);
+  width: clamp(150px, 50vw, 250px);
+  transition: all 1s ease-out;
+
+  text-align:center;
+  background-color: $sable;
+  color: $white;
+  border-right: 1px solid $white;
+
+  li {
+    width: 100%;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid $white;
+    box-shadow: 0 0 10px $sable;
+  }
+
+}
+
+.visible {
+  display: block;
+  animation: aparecer 300ms ease-out;
+}
+
+@keyframes aparecer {
+  from {left: -250px}
+  to {left: 0}
+}

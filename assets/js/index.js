@@ -1,3 +1,10 @@
-alert('Mira tu consola!');
-console.log('¡Hooola!, linkado ok.')
+const toggleButton = document.querySelector('nav > svg');
+const menu = document.querySelector('nav > ul');
+
+toggleButton.addEventListener('click', toggleMenu);
+
+function toggleMenu(e) {
+  menu.classList.toggle('visible');
+}
+
 
