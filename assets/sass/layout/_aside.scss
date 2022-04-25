@@ -6,24 +6,32 @@ aside {
     max-width: 375px;
     border: 1px solid $black;
     border-radius: 50%;
+    margin-bottom: 1rem; 
   }
 
+  > :nth-child(3) {
+    font-size: $large;
+    margin: 1rem 0;
+  }
+
+
+  /* PARRAFO */
   > :nth-child(4) {
     align-self: flex-start;
     text-align: justify;
+    line-height: 2rem;
   }
 
+  /* TITULO MÁS CURSOS */
   > :nth-child(5) {
     width: 100%;
     margin: .75rem 0;
     text-align: center;
-    font-family: $poppins;
-    font-size: $large;
-    font-weight: $bold;
     color: $white;
     background-color: $plomo;
   }
 
+  /* LISTADO DE CURSOS */
   > :nth-child(6) {
     align-self: flex-start;
     margin-bottom: 2rem;
@@ -34,4 +42,9 @@ aside {
   a {
     text-decoration: none;
   }
+}
+
+/* SERARAR ÍCONOS REDES SOCIALES */
+.fa-twitter {
+  margin: 0 1rem 0;
 }

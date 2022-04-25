@@ -18,6 +18,7 @@ El desafío 'Mi emprendimiento web' es la prueba del módulo 3 y consiste en un 
 
 * [MDN sobre clamp()][0]
 * [CSS Tricks sobre el uso de clamp() en font-size's dinámicos][1]
+* [MDN sobre el objeto del DOM ClassList (relacionado con `toggle()`)][4]
 
 ### Requerimientos
 
@@ -67,6 +68,10 @@ El desafío 'Mi emprendimiento web' es la prueba del módulo 3 y consiste en un 
     }
 ```
 
+* Para el nombre del instructor de cada curso, el `font-size: $large` se escapaba del ancho. Se probaron 2 soluciones:
+  1. Hacer una variable con un valor custom: `$more-than-medium: 18px;`
+  2. Usar un truco "feo" con `letter-spacing: -0.5px` Solo por entretenido lo he dejado así. 
+
 <hr>
 
 ## NOTAS
@@ -77,7 +82,7 @@ El desafío 'Mi emprendimiento web' es la prueba del módulo 3 y consiste en un 
 
 []:
 
-
+[4]:https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
 [3]:./assets/utils/presentacion.png
 [2]:./assets/utils/layoutNotes1.png
 [1]:https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
@@ -85,7 +90,7 @@ El desafío 'Mi emprendimiento web' es la prueba del módulo 3 y consiste en un 
 
 
 <!--TODO Implementar button:active & button:focus en XDA -->
-<!--TODO Incluir textos de menús dentros de enlaces -->
+<!--TODO -LISTO- Incluir textos de menús dentros de enlaces -->
 <!--TODO  -->
 <!--TODO  -->
 <!--TODO  -->
