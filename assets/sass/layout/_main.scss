@@ -4,4 +4,10 @@ main {
   article {
     @include articleBase;
   }
+
+  @include responseTo($bp-lg) {
+    article {
+      flex-grow: 1;
+    }
+  }
 }

@@ -5,7 +5,9 @@ nav {
   height: 10vh;
   max-height: 5rem;
   background-color: $black;
-  
+  position: fixed;
+  width: 100%;
+  top: 0;
 
   img {
     height: 60%;
@@ -15,5 +17,15 @@ nav {
 
   svg {
     margin-right: 1rem;
+    
+    & path:hover {
+      stroke: $orange !important;
+    }
+
+    @include responseTo($bp-lg) {
+      display: none;
+    }
   }
+
+
 }

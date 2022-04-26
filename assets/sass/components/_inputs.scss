@@ -2,4 +2,12 @@ input {
   margin-top: 1rem;
   height: 2rem;
   border-radius: 8px;
+
+  &:focus {
+    background-color: $tangerine;
+  }
+
+  @include responseTo($bp-lg) {
+    margin-top: 0;
+  }
 }

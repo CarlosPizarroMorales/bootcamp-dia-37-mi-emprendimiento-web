@@ -30,6 +30,39 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+@media (min-width: 992px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(3rem, auto);
+  }
+
+  nav {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+
+  header {
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+
+  main {
+    grid-column: 1/2;
+    grid-row: 3;
+  }
+
+  aside {
+    grid-column: 2/3;
+    grid-row: 3;
+  }
+
+  footer {
+    grid-column: 1/3;
+    grid-row: 4;
+  }
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -37,6 +70,9 @@ nav {
   height: 10vh;
   max-height: 5rem;
   background-color: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 nav img {
   height: 60%;
@@ -46,9 +82,23 @@ nav img {
 nav svg {
   margin-right: 1rem;
 }
+nav svg path:hover {
+  stroke: #ffa500 !important;
+}
+@media (min-width: 992px) {
+  nav svg {
+    display: none;
+  }
+}
 
 header {
   margin-top: clamp(1rem, 10vh, 5rem);
+}
+@media (min-width: 992px) {
+  header {
+    width: clamp(950px, 50vw, 1100px);
+    margin: 1rem auto 0;
+  }
 }
 
 main {
@@ -58,6 +108,16 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 768px) {
+  main {
+    margin: 0 clamp(16px, 15%, 180px) 1.25rem;
+  }
+}
+@media (min-width: 992px) {
+  main {
+    margin: 0 0.25rem 1.25rem;
+  }
 }
 main article {
   border: 1px dotted rgba(80, 80, 80, 0.5);
@@ -84,6 +144,11 @@ main article .paragraph-icons i {
 main article .paragraph-count {
   margin-right: 0.75rem;
 }
+@media (min-width: 992px) {
+  main article {
+    flex-grow: 1;
+  }
+}
 
 aside {
   border: 1px solid #000;
@@ -95,6 +160,16 @@ aside {
   /* PARRAFO */
   /* TITULO MÁS CURSOS */
   /* LISTADO DE CURSOS */
+}
+@media (min-width: 768px) {
+  aside {
+    margin: 0 clamp(16px, 15%, 180px) 1.25rem;
+  }
+}
+@media (min-width: 992px) {
+  aside {
+    margin: 0 0.25rem 1.25rem;
+  }
 }
 aside img {
   width: 60%;
@@ -144,29 +219,45 @@ footer {
   background: #060606;
   color: #fff;
 }
-footer p {
+footer > p {
   display: flex;
   flex-direction: column;
 }
-footer p :first-child {
+footer > p :first-child {
   margin-top: clamp(1px, 1vw, 16px);
 }
-footer p span {
+@media (min-width: 992px) {
+  footer > p :first-child {
+    margin-top: 0;
+  }
+}
+footer > p span {
   padding-top: clamp(4px, 1.5vw, 16px);
 }
-
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
+@media (min-width: 992px) {
+  footer > p span {
+    padding-top: 0;
+  }
+}
+@media (min-width: 992px) {
+  footer > p {
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 nav > ul {
   display: none;
   list-style: none;
   position: fixed;
-  /* top: 50vh; */
-  /* transform: translateY(-50%); */
   top: 0;
   left: 0;
   width: clamp(150px, 50vw, 250px);
@@ -182,6 +273,12 @@ nav > ul li {
   border-bottom: 1px solid #fff;
   box-shadow: 2px 2px 20px #060606;
 }
+@media (min-width: 992px) {
+  nav > ul li {
+    box-shadow: none;
+    border: none;
+  }
+}
 nav > ul a {
   color: #fff;
   text-decoration: none;
@@ -189,10 +286,18 @@ nav > ul a {
   width: 100%;
   height: 100%;
 }
+@media (min-width: 992px) {
+  nav > ul {
+    display: flex;
+    position: static;
+    width: 40%;
+    border: none;
+  }
+}
 
 .visible {
   display: block;
-  animation: aparecer 300ms ease-out;
+  animation: aparecer 500ms ease-in-out;
 }
 
 @keyframes aparecer {
@@ -211,11 +316,23 @@ button {
   border: 1px solid #fff;
   border-radius: 4px;
 }
+button:hover {
+  background-color: #fff;
+  border: 1px solid #060606;
+}
 
 input {
   margin-top: 1rem;
   height: 2rem;
   border-radius: 8px;
+}
+input:focus {
+  background-color: #ffaf6d;
+}
+@media (min-width: 992px) {
+  input {
+    margin-top: 0;
+  }
 }
 
 aside > svg {

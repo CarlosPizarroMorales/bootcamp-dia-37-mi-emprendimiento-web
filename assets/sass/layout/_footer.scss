@@ -10,17 +10,39 @@ footer {
   background: $sable;
   color: $white;
 
-  p {
+  > p {
     display: flex;
     flex-direction: column;
 
     :first-child {
       margin-top: clamp(1px, 1vw, 16px);
+
+      @include responseTo($bp-lg) {
+        margin-top: 0;
+      }
     }
 
     span {
       padding-top: clamp(4px, 1.5vw, 16px);
+
+      @include responseTo($bp-lg) {
+        padding-top: 0;
+      }
     }
+
+    @include responseTo($bp-lg) {
+      flex-direction: row;
+      align-items: center;
+      width: 50%;
+      justify-content: space-between;
+    }
+  }
+
+  @include responseTo($bp-lg) {
+    flex-direction: row;
+    align-items: center;
+
+  
   }
 
 }

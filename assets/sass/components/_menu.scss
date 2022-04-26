@@ -1,15 +1,13 @@
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-}
+// nav {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+// }
 
 nav > ul {
   display: none;  
   list-style: none;
   position: fixed;
-  /* top: 50vh; */
-  /* transform: translateY(-50%); */
   top: 0;
   left: 0;
   width: clamp(150px, 50vw, 250px);
@@ -25,6 +23,11 @@ nav > ul {
     padding: 1.25rem 0;
     border-bottom: 1px solid $white;
     box-shadow: 2px 2px 20px $sable;
+
+    @include responseTo($bp-lg) {
+      box-shadow: none;
+      border: none;
+    }
   }
 
   a {
@@ -35,11 +38,18 @@ nav > ul {
     height: 100%;
   }
 
+  @include responseTo($bp-lg) {
+    display: flex;
+    position: static;
+    width: 40%;
+    border: none;
+  }
+
 }
 
 .visible {
   display: block;
-  animation: aparecer 300ms ease-out;
+  animation: aparecer 500ms ease-in-out;
 }
 
 @keyframes aparecer {

@@ -26,7 +26,7 @@ El desafío 'Mi emprendimiento web' es la prueba del módulo 3 y consiste en un 
 |:-------:|:------:|:------:|:------:|
 |1|OK|Usar Sass con patrón 7-1|3|
 |2|--|Crear grilla usando CSS Grid para crear diseño *responsive* según las maquetas|2|
-|3|--|Usar CSS Flexbox para posicionar y alinear elementos dentro de la maqueta|2|
+|3|OK|Usar CSS Flexbox para posicionar y alinear elementos dentro de la maqueta|2|
 |4|OK|Implementar transiciones y animaciones al elemento SVG indicado|2|
 |5|--|Crear mediaqueries para visualizar correctamente la página en cualquier tamaño de dispositivo|1|
 
@@ -60,7 +60,7 @@ El desafío 'Mi emprendimiento web' es la prueba del módulo 3 y consiste en un 
 * ![Nota sobre el layout][2]
 * Se ha comenzado por la vista *mobile* para dispositivos de 320px de ancho. 
 * Se ha definido `width: 70%` y `max-width: 375px` al svg-animado para evitar que este 'inunde' la vista al cambiar a pantallas anchas, que tienen una disposición horizontal y no vertical como los dispositivos móviles.
-* En el footer, cuando se está en *viewport* de 320px de ancho (probado en las *Dev Tools* con el modelo iPhone 5/SE), no se ha respetado la maqueta porque el espaciado vertical entre sus elementos hacía que la imagen svg animada quedara ligeramente oculta de la vista, lo que en mi opinión resta en la experiencia de usuario. Por eso se ha creado una regla dinámica con `clamp()` para que este espaciado crezca en relación al ancho de la vista hasta obtener con cierta fidelidad la proporción de la maqueta cuando se encuentra en vistas de tipo tablet, cerca de los 800px de `width` 
+* En el footer, cuando se está en *viewport* de 320px de ancho (probado en las *Dev Tools* con el modelo iPhone 5/SE), no se ha respetado la maqueta porque el espaciado vertical entre sus elementos hacía que la imagen svg animada quedara ligeramente oculta de la vista, lo que en mi opinión resta en la experiencia de usuario. Por eso se ha creado una regla dinámica con `clamp()` para que este espaciado crezca en relación al ancho de la vista hasta obtener con cierta fidelidad la proporción de la maqueta cuando se encuentra en vistas de tipo tablet, cerca de `width: 800px` 
 
 ```css
  footer p span {
@@ -80,8 +80,6 @@ El desafío 'Mi emprendimiento web' es la prueba del módulo 3 y consiste en un 
 
 <hr>
 
-[]:
-
 [4]:https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
 [3]:./assets/utils/presentacion.png
 [2]:./assets/utils/layoutNotes1.png
@@ -89,8 +87,7 @@ El desafío 'Mi emprendimiento web' es la prueba del módulo 3 y consiste en un 
 [0]:https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 
 
-<!--TODO Implementar button:active & button:focus en XDA -->
-<!--TODO -LISTO- Incluir textos de menús dentros de enlaces -->
-<!--TODO  -->
-<!--TODO  -->
-<!--TODO  -->
+<!-- TODO Implementar button:active & button:focus en XDA -->
+<!-- TODO Usar las mediaqueries requeridas para cambiar font-sizes -->
+<!-- TODO Revisar alineación horizontal heaader y footer en $bp-lg -->
+<!-- TODO  -->
